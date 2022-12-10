@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundia de la FIFA</title>
+</head>
+<body>
+    <script> 
+        function saltarLineas(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase);
+            saltarLineas();
+        }
+
+        var anioMundial = 1930;
+        var limite = parseInt(prompt("ingrese el numero limite:"));
+
+        while(anioMundial <= limite){
+            imprimir("Hubo mundial en la FIFA en el anio:"+ anioMundial);
+            anioMundial = anioMundial + 4;
+        }
+        imprimir("fin");
+    </script>
+    
+</body>
+</html>

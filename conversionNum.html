@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covirtiendo Numeros</title>
+</head>
+<body>
+    <script>
+        function saltarLineas(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase);
+            saltarLineas();
+        }
+        function calculoIMC(peso, altura){
+            return (peso/(altura*altura));
+        }
+        
+        nombre = prompt("Ingrese su nombre");
+        pesoUsuario = prompt(nombre+", Ingrese su peso");
+        alturaUsuarios = prompt(nombre+", Ingrese su altura");
+        
+        imcCalculado = calculoIMC(pesoUsuario, alturaUsuarios);
+        
+        imprimir("El peso corporal de "+nombre+" es de: " +imcCalculado);
+
+    </script>
+</body>
+</html>

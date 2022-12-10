@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<!--
+1 – Crea una función de lotería que reciba un número n y 
+sortee un número entre 0 a n, retornando ese valor. 
+De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, 
+escribirás var numeroPensado = sorteo(n);. Realiza esa modificación, creando una nueva 
+función y utilízala de forma correcta.
+
+2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número lanzado 
+era mayor o menor al número pensando por el programa.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+</head>
+<body>
+    <script>
+        function saltarLineas(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase)
+            saltarLineas();
+        }
+        var numeroPensado = parseInt(prompt("En que numero pensaste:"));
+        //var numeroIngresado = parseInt(prompt("Ingrese un numero:"));
+
+        
+        function calculo(n){
+            if(n===0){
+                n=10;
+            }
+            return Math.round(Math.random()*n);
+        }
+
+        var sorteo = calculo(numeroPensado);
+        
+
+        if(sorteo === numeroPensado){
+            imprimir("Eureka!!! lo encontraste");
+        }else if(numeroPensado > sorteo ){
+            imprimir(`El numero que pensaste es:${numeroPensado} mayor que ${sorteo}`);
+        }else{
+            imprimir(`El numero que pensaste es:${numeroPensado} menor que ${sorteo}`);
+        }        
+
+    </script>
+</body>
+</html>

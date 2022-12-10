@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<h1> CALCULANDO IMC </h1>
+<script>
+function saltarLineas(){
+    document.write("<br>");
+    document.write("<br>");
+}
+function imprimir(frase){
+    document.write(frase);
+    saltarLineas();
+}
+function calculoIMC(peso, altura){
+    return (peso/(altura*altura));
+}
+
+nombre = prompt("Ingrese su nombre");
+pesoUsuario = prompt(nombre+", Ingrese su peso");
+alturaUsuarios = prompt(nombre+", Ingrese su altura");
+
+imcCalculado = calculoIMC(pesoUsuario, alturaUsuarios);
+
+imprimir("El peso corporal de "+nombre+" es de: " +imcCalculado);
+
+if(imcCalculado < 18.5){
+    imprimir(nombre+"IMC bajo, come frutas y Verduras 🍎🍊🍉🥑🥬🥦");
+}else if(imcCalculado >= 18.5 && imcCalculado < 25){
+    imprimir(`yuppi, sigue asi IMC normal... felicidades ${nombre}🥗`);
+}else if(imcCalculado >= 25 && imcCalculado < 30){
+    imprimir("Alerta, debes hacer mas ejercicio...IMC con Sobrepeso🏃‍♂️🧗‍♀️🕺🏊‍♂️⛹️‍♀️🏋️‍♂️🚴‍♀️");
+}else{
+    imprimir("Chispas!!!... Es sobrepeso, prohibido comer esto🍟🌭🥞")
+}
+
+
+</script>
